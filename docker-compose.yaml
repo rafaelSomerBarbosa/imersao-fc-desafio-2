@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+    api:
+        build:
+            context: ./
+            dockerfile: ./devops/Dockerfile.api
+        container_name: nest_api
+        ports: 
+            - 3000:3000
+    front:
+        build:
+            context: ./
+            dockerfile: ./devops/Dockerfile.front
+        container_name: react_front
+        ports: 
+            - 3001:3000
