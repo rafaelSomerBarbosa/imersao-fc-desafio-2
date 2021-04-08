@@ -3,7 +3,7 @@ import { Controller, Get } from '@nestjs/common';
 @Controller('routes')
 export class AppController {
   @Get()
-  getHello() {
+  getRoutes() {
     return [
       { title: 'Posição 1', startPosition: { latitude: 10.1, longitude: 5.1 }, endPosition: { latitude: 10.2, longitude: 5.2 } },
       { title: 'Posição 2', startPosition: { latitude: 20.1, longitude: 6.1 }, endPosition: { latitude: 20.2, longitude: 6.2 } },
