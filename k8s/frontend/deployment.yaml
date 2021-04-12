@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: desafio3-frontend
+  labels:
+    app: desafio3-frontend
+spec:
+  selector:
+    matchLabels: 
+      app: desafio3-frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: desafio3-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: "rafaelsbarbosa/imersao-fc-desafio-3-frontend:latest"
+          ports:
+            - containerPort: 3000
